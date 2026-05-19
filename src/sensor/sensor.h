@@ -8,7 +8,10 @@ class Sensor{
         uint8_t _pin;
     public:
         Sensor(uint8_t p);
-        virtual float leerValor() = 0;
+
+        virtual void begin() = 0;
+        virtual void process() = 0;
+        
 };
 
 #endif

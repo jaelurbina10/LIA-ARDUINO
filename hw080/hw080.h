@@ -7,12 +7,16 @@
 class hw080 : public Sensor {
 
 private:
-    float _humedad;
+    uint8_t _humedadP;
 
 public:
-    hw080(int p);
+    hw080(uint8_t p);
 
-    float leerValor() override;
+
+    void begin() override;
+    void process() override;
+
+    uint8_t getPorHum() const;
 
     //Posiblemente cambiar a controlador de humedad, define la humedad especifica que tiene que tener el suelo
     //void setHumedSuelo(float valor);
