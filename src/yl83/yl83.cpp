@@ -6,7 +6,7 @@ void yl83::begin(){
     pinMode(_pin, INPUT);
 }
 void yl83::process(){
-    _llueve = digitalRead(_pin);
+    _llueve = !digitalRead(_pin);
 }
 bool yl83::estaLLoviendo() const{
     return this->_llueve;
