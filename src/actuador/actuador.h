@@ -1,5 +1,5 @@
-#ifndef ACTUADOR.H
-#define ACTUADOR.H
+#ifndef ACTUADOR_H
+#define ACTUADOR_H
 
 #include <Arduino.h>
 
