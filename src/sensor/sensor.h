@@ -4,14 +4,12 @@
 #include <Arduino.h>
 
 class Sensor{
-    protected:
-        uint8_t _pin;
     public:
-        Sensor(uint8_t p);
+        Sensor(){}
 
         virtual void begin() = 0;
         virtual void process() = 0;
-        
+
 };
 
 #endif

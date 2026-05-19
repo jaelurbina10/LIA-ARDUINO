@@ -8,6 +8,7 @@ class hw080 : public Sensor {
 
 private:
     uint8_t _humedadP;
+    uint8_t _pin;
 
 public:
     hw080(uint8_t p);

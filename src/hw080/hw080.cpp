@@ -1,6 +1,6 @@
 #include "hw080.h"
 
-hw080::hw080(uint8_t p) : Sensor(p), _humedadP(0){}
+hw080::hw080(uint8_t p) : _pin(p), _humedadP(0){}
 
 void hw080::begin(){}
 
