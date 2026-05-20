@@ -8,7 +8,7 @@ class Actuador{
         bool _activo;
     public:
 
-        Actuador(uint8_t p);
+        Actuador();
     
         bool estado() const;
     

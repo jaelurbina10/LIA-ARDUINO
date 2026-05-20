@@ -1,6 +1,6 @@
 #include "yl83.h"
 
-yl83::yl83(uint8_t p) : Sensor(p), _llueve(false){}
+yl83::yl83(uint8_t p) : _pin(p), _llueve(false){}
 
 void yl83::begin(){
     pinMode(_pin, INPUT);

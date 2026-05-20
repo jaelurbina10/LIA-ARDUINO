@@ -1,6 +1,6 @@
 #include "ldr.h"
 
-ldr::ldr(uint8_t p) : Sensor(p){}
+ldr::ldr(uint8_t p) : _pin(p){}
 
 ldr::begin(){}
 

@@ -5,6 +5,7 @@
 
 class yl83 : public Sensor {
     private:
+        uint8_t _pin;
         bool _llueve;
 
     public:
