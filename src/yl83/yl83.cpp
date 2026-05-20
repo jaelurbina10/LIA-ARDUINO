@@ -8,6 +8,6 @@ void yl83::begin(){
 void yl83::process(){
     _llueve = !digitalRead(_pin);
 }
-bool yl83::estaLLoviendo() const{
+bool yl83::estaLloviendo() const{
     return this->_llueve;
 }
