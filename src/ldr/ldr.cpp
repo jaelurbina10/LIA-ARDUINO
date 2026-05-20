@@ -2,8 +2,8 @@
 
 ldr::ldr(uint8_t p) : _pin(p){}
 
-ldr::begin(){}
+void ldr::begin(){}
 
-ldr::process(){
+void ldr::process(){
     
 }
