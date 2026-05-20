@@ -5,7 +5,7 @@
 
 class Sensor{
     public:
-        Sensor(){}
+        Sensor();
 
         virtual void begin() = 0;
         virtual void process() = 0;
