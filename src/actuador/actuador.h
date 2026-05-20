@@ -5,7 +5,6 @@
 
 class Actuador{
     protected:
-        uint8_t _pin;
         bool _activo;
     public:
 
