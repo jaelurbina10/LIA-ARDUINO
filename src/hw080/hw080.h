@@ -1,7 +1,7 @@
 #ifndef HW080_H
 #define HW080_H
 
-#include "sensor.h"
+#include "sensor/sensor.h"
 
 
 class hw080 : public Sensor {

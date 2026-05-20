@@ -1,7 +1,7 @@
 #ifndef LDR_H
 #define LDR_H
 
-#include "sensor.h"
+#include "sensor/sensor.h"
 
 class ldr : public Sensor{
     private:

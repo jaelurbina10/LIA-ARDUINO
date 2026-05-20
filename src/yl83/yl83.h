@@ -1,7 +1,7 @@
 #ifndef YL83_H
 #define YL83_H
 
-#include "sensor.h"
+#include "sensor/sensor.h"
 
 class yl83 : public Sensor {
     private:
