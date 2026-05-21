@@ -6,6 +6,8 @@
 #include "hw080/hw080.h"
 #include "ldr/ldr.h"
 #include "yl83/yl83.h"
+#include "dht11/dht11.h"
+#include "relay/relay.h"
 
 
 #endif
