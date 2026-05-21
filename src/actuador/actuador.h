@@ -11,6 +11,8 @@ class Actuador{
         Actuador();
     
         bool estado() const;
+
+        virtual void begin() = 0;
     
         virtual void encender() = 0;
         virtual void apagar() = 0;
