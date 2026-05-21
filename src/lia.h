@@ -8,6 +8,6 @@
 #include "yl83/yl83.h"
 #include "dht11/dht11.h"
 #include "relay/relay.h"
-
+#include "servo/servo.h"
 
 #endif
