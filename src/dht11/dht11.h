@@ -12,8 +12,8 @@ private:
     float _temperatura;
     float _humedad;
 
-    long _ultimoTLectura;
-    const long _interLectura = 1000;
+    unsigned long _ultimoTLectura;
+    const unsigned long _interLectura = 1000;
 
     const float _umbralTempAlta = 37.0;
     const float _umbralTempBaja = 15.0;
