@@ -6,7 +6,7 @@
 class ldr : public Sensor{
     private:
         const uint8_t _disparo = 200;
-        uint16_t _rawValue;
+        uint16_t _uxRaw;
         uint8_t _pin;
     public:
         ldr(uint8_t p);
