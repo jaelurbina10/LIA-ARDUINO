@@ -26,8 +26,8 @@ public:
     void begin() override;
     void process() override;
 
-    bool muchoCalor() const;
-    bool muchoFrio() const;
+    bool haceCalor() const;
+    bool haceFrio() const;
     bool muchaHumedad() const;
     bool pocaHumedad() const;
 

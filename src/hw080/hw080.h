@@ -3,12 +3,15 @@
 
 #include "sensor/sensor.h"
 
+//Sensor de humedad del suelo HW-080, basado en el sensor capacitivo de humedad del suelo. Proporciona una lectura de humedad relativa del suelo en porcentaje.
 
 class hw080 : public Sensor {
 
 private:
-    uint8_t _humedadP;
+    float _humedadP;
     uint8_t _pin;
+    uint8_t _maxHumedad;
+    uint8_t _minHumedad;
 
 public:
     hw080(uint8_t p);
@@ -17,10 +20,11 @@ public:
     void begin() override;
     void process() override;
 
-    uint8_t getPorHum() const;
-
-    //Posiblemente cambiar a controlador de humedad, define la humedad especifica que tiene que tener el suelo
-    //void setHumedSuelo(float valor);
+    float getPorHum() const;
+    uint8_t getMaxHum() const;
+    uint8_t getMinHum() const;
+    void setMaxHum(uint8_t percent);
+    void setMinHum(uint8_t percent);
 
 };
 

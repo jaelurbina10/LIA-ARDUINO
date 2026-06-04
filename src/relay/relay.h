@@ -13,6 +13,6 @@ class relay : public Actuador{
 
         void encender();
         void apagar();
-}
+};
 
 #endif

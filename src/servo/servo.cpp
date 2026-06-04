@@ -1,4 +1,4 @@
-#include "ServoActuador.h"
+#include "../servo/servo.h"
 
 ServoActuador::ServoActuador(uint8_t p, uint8_t i, uint8_t a) 
     : _pin(p), _anguloInactivo(i), _anguloActivo(a) {

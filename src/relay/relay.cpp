@@ -1,9 +1,9 @@
 #include "relay/relay.h"
 
-relay::relay(uint8_t p) : _pin(p);
+relay::relay(uint8_t p) : _pin(p){}
 
 void relay::begin(){
-    pinmode(_pin, OUTPUT);
+    pinMode(_pin, OUTPUT);
 }
 void relay::encender(){
     digitalWrite(_pin, HIGH);
