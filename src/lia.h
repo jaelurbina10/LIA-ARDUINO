@@ -9,6 +9,6 @@
 #include "dht11/dht11.h"
 #include "relay/relay.h"
 #include "servo/servo.h"
-#include "controller/Controller.h"
+#include "controller/controller.h"
 
 #endif

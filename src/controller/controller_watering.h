@@ -21,8 +21,6 @@ class ControllerWatering : public ControllerBase {
     void linkRainSensor(Sensor& rainSensor);
     void linkSoilHumiditySensor(Sensor& humiditySensor);
     void linkWaterPump(Actuador& waterPump);
-    void linkServo(Actuador& servo);
-
 };
 };
 #endif

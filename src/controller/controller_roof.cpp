@@ -42,7 +42,7 @@ void LIA::ControllerRoof::process(){
     //===LÓGICA DE CONTROL===
     bool a = rainSensor->estaLloviendo();
     bool b = soilSensor->getPorHum() >= soilSensor->getMaxHum();
-    bool c = temphSensor->getTemperatura() >= temphSensor->haceCalor();
+    bool c = temphSensor->haceCalor();
 
     if(a && !b || !a && b && c){
         roofServo->encender();
