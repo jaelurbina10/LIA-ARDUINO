@@ -40,12 +40,11 @@ void LIA::ControllerRoof::process(){
     ServoActuador* roofServo = (ServoActuador*)ControllerBase::getActuador(0);
 
     //===LÓGICA DE CONTROL===
-    
-    if(rainSensor->estaLloviendo() && soilSensor->getPorHum() < soilSensor->getMaxHum()){
+    bool a = rainSensor->estaLloviendo();
+    bool b = soilSensor->getPorHum() >= soilSensor->getMaxHum();
+    bool c = temphSensor->getTemperatura() >= temphSensor->haceCalor();
 
-         roofServo->encender();
-        
-    }else if(!rainSensor->estaLloviendo() && temphSensor->haceCalor() && temphSensor->muchaHumedad()){
+    if(a && !b || !a && b && c){
         roofServo->encender();
     }
     else{

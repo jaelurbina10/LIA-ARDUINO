@@ -5,5 +5,6 @@
 
     #include "../controller/controller_base.h"
     #include "../controller/controller_watering.h"
+    #include "../controller/controller_roof.h"
 
 #endif // CONTROLLER_TOP_H
