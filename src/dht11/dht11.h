@@ -2,7 +2,7 @@
 #define DHT11_H
 
 #include "sensor/sensor.h"
-#include <DHT11.h
+#include <DHT11.h>
 
 class dht11 : public Sensor {
 private:
@@ -10,16 +10,16 @@ private:
     DHT11 _dht11;
     int _dhtReading;
     
-    float _temperatura;
-    float _humedad;
+    uint8_t _temperatura;
+    uint8_t _humedad;
 
-    float _startTime;
+    uint32_t _startTime;
     uint32_t _periodMs;
 
-    float _highTemp;
-    float _lowTemp;
-    float _highHum;
-    float _lowHum;
+    uint8_t _highTemp;
+    uint8_t _lowTemp;
+    uint8_t _highHum;
+    uint8_t _lowHum;
 
 public:
     dht11(uint8_t p);
@@ -27,15 +27,15 @@ public:
     void begin() override;
     void process() override;
 
-    void setThresholds(float highTemp, float lowTemp, float highHum, float lowHum);
+    void setThresholds(uint8_t highTemp, uint8_t lowTemp, uint8_t highHum, uint8_t lowHum);
 
     bool haceCalor() const;
     bool haceFrio() const;
     bool muchaHumedad() const;
     bool pocaHumedad() const;
 
-    float getTemperatura() const;
-    float getHumedad() const;
+    uint8_t getTemperatura() const;
+    uint8_t getHumedad() const;
 };
 
 #endif
