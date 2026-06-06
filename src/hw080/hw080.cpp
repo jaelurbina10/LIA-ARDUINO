@@ -5,7 +5,7 @@ hw080::hw080(uint8_t p) : _pin(p), _humedadP(0), _maxHumedad(80), _minHumedad(10
 void hw080::begin(){}
 
 void hw080::process(){
-    this->_humedadP = analogRead(_pin) / 102300.0; // Convertir a porcentaje
+    this->_humedadP = analogRead(_pin) * (100.0 / 1023.0); // Convertir a porcentaje
 }
 //Setters
 void hw080::setMaxHum(uint8_t p){

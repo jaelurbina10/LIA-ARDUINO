@@ -6,10 +6,10 @@ void relay::begin(){
     pinMode(_pin, OUTPUT);
 }
 void relay::encender(){
-    digitalWrite(_pin, HIGH);
+    digitalWrite(_pin, LOW);
     _activo = true;
 }
 void relay::apagar(){
-    digitalWrite(_pin, LOW);
+    digitalWrite(_pin, HIGH);
     _activo = false;
 }
