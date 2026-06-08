@@ -36,6 +36,11 @@ public:
 
     uint8_t getTemperatura() const;
     uint8_t getHumedad() const;
+
+    uint8_t getMaxhumidity() const;
+    uint8_t getMaxTemp() const;
+    uint8_t getMinTemp() const;
+    uint8_t getMinHumidity() const;
 };
 
 #endif

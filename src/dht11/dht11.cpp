@@ -58,3 +58,19 @@ uint8_t dht11::getTemperatura() const {
 uint8_t dht11::getHumedad() const {
     return _humedad;
 }
+
+uint8_t dht11::getMaxhumidity() const {
+    return _highHum;
+}
+
+uint8_t dht11::getMaxTemp() const {
+    return _highTemp;
+}
+
+uint8_t dht11::getMinTemp() const {
+    return _lowTemp;
+}
+
+uint8_t dht11::getMinHumidity() const {
+    return _lowHum;
+}
