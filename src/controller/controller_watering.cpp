@@ -55,6 +55,8 @@ void LIA::ControllerWatering::process(){
             waterPump->apagar();
         }
 
+    }else{
+        waterPump->apagar();
     }
 
     return;
