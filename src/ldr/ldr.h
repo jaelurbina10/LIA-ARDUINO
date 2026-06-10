@@ -5,7 +5,7 @@
 
 class ldr : public Sensor{
     private:
-        const uint8_t _disparo = 200;
+        uint16_t _disparo;
         uint16_t _uxRaw;
         uint8_t _pin;
     public:
@@ -14,6 +14,9 @@ class ldr : public Sensor{
         void begin() override;
         void process() override;
 
+        void setDisparo(uint16_t d);
+        uint16_t getRawLux();
+        uint16_t getDisparo() const;
         bool esNoche() const;
 };
 

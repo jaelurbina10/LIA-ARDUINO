@@ -46,7 +46,7 @@ void LIA::controllerFungi::process(){
     bool b = soilSensor->getPorHum() > soilSensor->getMaxHum();
     bool c = DHT11->getHumedad() > DHT11->getMaxhumidity();
 
-    if(!a && b && c || a && b && !c){
+    if((!a && b && c) || (a && b && !c)){
         if(millis() - _uvStartTime >= _uvOnTime) {
             if(uvLight->estado()) {
                 uvLight->apagar();

@@ -44,7 +44,7 @@ void LIA::ControllerRoof::process(){
     bool b = soilSensor->getPorHum() >= soilSensor->getMaxHum();
     bool c = temphSensor->haceCalor();
 
-    if(a && !b || !a && b && c){
+    if((a && !b) || (!a && b && c)){
         roofServo->encender();
     }
     else{

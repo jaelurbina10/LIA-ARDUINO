@@ -4,6 +4,8 @@
 #include "sensor/sensor.h"
 #include <DHT11.h>
 
+namespace LIA {
+    
 class dht11 : public Sensor {
 private:
     uint8_t _pin;
@@ -42,5 +44,5 @@ public:
     uint8_t getMinTemp() const;
     uint8_t getMinHumidity() const;
 };
-
+};
 #endif

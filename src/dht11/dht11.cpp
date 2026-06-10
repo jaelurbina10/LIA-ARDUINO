@@ -1,6 +1,6 @@
 #include "dht11.h"
 
-dht11::dht11(uint8_t p) : _pin(p), _dht11(_pin){
+LIA::dht11::dht11(uint8_t p) : _pin(p), _dht11(_pin){
     _startTime = 0;
     _periodMs = 2000;
     _highTemp = 37;
@@ -9,9 +9,9 @@ dht11::dht11(uint8_t p) : _pin(p), _dht11(_pin){
     _lowHum = 40;
 }
 
-void dht11::begin() {}
+void LIA::dht11::begin() {}
 
-void dht11::process() {
+void LIA::dht11::process() {
     if(millis() - _startTime >= _periodMs) {
         _startTime = millis();
         int a = 0, b = 0;
@@ -27,7 +27,7 @@ void dht11::process() {
     }
 }
 
-void dht11::setThresholds(uint8_t highTemp, uint8_t lowTemp, uint8_t highHum, uint8_t lowHum) {
+void LIA::dht11::setThresholds(uint8_t highTemp, uint8_t lowTemp, uint8_t highHum, uint8_t lowHum) {
     _highTemp = highTemp;
     _lowTemp = lowTemp;
     _highHum = highHum;
@@ -35,42 +35,42 @@ void dht11::setThresholds(uint8_t highTemp, uint8_t lowTemp, uint8_t highHum, ui
 }
 
 
-bool dht11::haceCalor() const {
+bool LIA::dht11::haceCalor() const {
     return _temperatura >= _highTemp;
 }
 
-bool dht11::haceFrio() const {
+bool LIA::dht11::haceFrio() const {
     return _temperatura <= _lowTemp;
 }
 
-bool dht11::muchaHumedad() const {
+bool LIA::dht11::muchaHumedad() const {
     return _humedad >= _highHum;
 }
 
-bool dht11::pocaHumedad() const {
+bool LIA::dht11::pocaHumedad() const {
     return _humedad <= _lowHum;
 }
 
-uint8_t dht11::getTemperatura() const {
+uint8_t LIA::dht11::getTemperatura() const {
     return _temperatura;
 }
 
-uint8_t dht11::getHumedad() const {
+uint8_t LIA::dht11::getHumedad() const {
     return _humedad;
 }
 
-uint8_t dht11::getMaxhumidity() const {
+uint8_t LIA::dht11::getMaxhumidity() const {
     return _highHum;
 }
 
-uint8_t dht11::getMaxTemp() const {
+uint8_t LIA::dht11::getMaxTemp() const {
     return _highTemp;
 }
 
-uint8_t dht11::getMinTemp() const {
+uint8_t LIA::dht11::getMinTemp() const {
     return _lowTemp;
 }
 
-uint8_t dht11::getMinHumidity() const {
+uint8_t LIA::dht11::getMinHumidity() const {
     return _lowHum;
 }
