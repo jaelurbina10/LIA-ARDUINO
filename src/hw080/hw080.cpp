@@ -6,7 +6,7 @@ void hw080::begin(){}
 
 void hw080::process(){
     _humedadP = analogRead(_pin) * (100.0 / 1023.0); // Convertir a porcentaje
-    _humedadP = 100 - _humedadP; // Invertir el valor para que 0% sea seco y 100% sea húmedo
+    //_humedadP = 100 - _humedadP; // Invertir el valor para que 0% sea seco y 100% sea húmedo
 }
 //Setters
 void hw080::setMaxHum(uint8_t p){

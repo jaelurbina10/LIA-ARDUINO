@@ -6,6 +6,8 @@ void ldr::begin(){}
 
 void ldr::process(){
     _uxRaw = analogRead(_pin);
+    //invertir valor
+    _uxRaw = 1023 - _uxRaw;
 }
 
 void ldr::setDisparo(uint16_t d){
